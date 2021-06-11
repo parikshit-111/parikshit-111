@@ -926,8 +926,6 @@ def get_vaccination_stats(pincode):
                                          }
     }
     
-    df = pd.read_csv('D:\Programming\Python\india_pincode.csv')
-    
     df = pd.read_csv('D:\Programming\Python\convertcsv.csv')
     l_district=int(pincode)
     dataframe=df[['Sheet1/Pincode', 'Sheet1/District','Sheet1/State']]
