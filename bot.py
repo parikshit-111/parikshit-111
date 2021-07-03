@@ -19,11 +19,12 @@ rules=["1. To get the details of your district, you need to call >pin function w
        "4. Bot is still on development phase. If you are facing any issues, please contact pbarua111.official@gmail.com",
        "5. Get vaccinated ASAP"]
 
+
 @client.event
 async def on_ready():
     print("Bot is ready")
     
-@client.command(aliases=["Hi","Yo","hi","yo","ay","sup","Sup","heyy","hey"])
+@client.command(aliases=["Hi","Yo","hi","yo","ay","sup","Sup","heyy","hey","heyyy"])
 async def hello(ctx):
     await ctx.send("Hey")
     await ctx.send("It's me! cowimo \U0001F489")
@@ -33,11 +34,11 @@ async def hello(ctx):
 @client.command(aliases=["rules","support","cohelp"])
 async def rule(ctx,*,number):
     if number=='0':
-        for x in rules:
+        for x in sex_rules:
             await ctx.send(x)
     else:
         if number.isdigit() and int(number)<=len(rules):
-            await ctx.send(rules[int(number)-1])
+            await ctx.send(sex_rules[int(number)-1])
         else:
             val="Number is not within range"
             await ctx.send(val)
